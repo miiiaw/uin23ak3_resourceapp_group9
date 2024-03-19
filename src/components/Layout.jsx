@@ -1,21 +1,13 @@
-import { Link } from "react-router-dom";
+import Nav from "./Nav";
 
 export default function Layout({children}){
 
-    const categories = ["html", "css", "javascript", "react", "sanity"]
+
 
     return(
         <>
         <div id="container">
-            <nav>
-                <ul>
-                    {categories.map((category, index) => 
-                    <li key={category+index}>
-                        <Link to={category}>{category}</Link>
-                    </li>
-                    )}
-                </ul>
-            </nav>
+            <Nav />
             <main>
                 {children}
             </main>
